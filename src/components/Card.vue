@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Canvas from "./Canvas.vue";
 defineProps<{ }>();
 </script>
 
@@ -11,7 +12,7 @@ defineProps<{ }>();
         <span v-else> {{title ? title : "New Card"}}  </span>
     </div>
     <button @click="editing = !editing">{{ editing ? "Save card" : "Edit card" }}</button>
-    <canvas @mousedown="drawCanvas" id="art" width="300" height="300"></canvas>
+    <Canvas :editing="editing" />
     <div id="rules"> 
         <span v-if="editing"> 
             <textarea v-model="rules" placeholder="Insert card text..."></textarea>  
@@ -90,15 +91,6 @@ button {
 #rules {
     padding: 10px;
     font-size: 16pt;
-}
-
-canvas {
-    background: white;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0;
-    padding-right: 0;
-    display: block;
 }
 
 </style>
