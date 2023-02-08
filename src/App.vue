@@ -1,14 +1,11 @@
 <script setup lang="ts">
-import Card from "./components/Card.vue";
+import GameCard from "./components/GameCard.vue";
 </script>
 
 <template>
-
   <div class="wrapper">
-    <Card /> 
-    <Card /> 
+    <GameCard />
   </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
