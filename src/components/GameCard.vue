@@ -1,6 +1,5 @@
-<script setup lang="ts">
+<script setup>
 import DrawingCanvas from "./DrawingCanvas.vue";
-defineProps<{}>();
 </script>
 
 <template>
@@ -24,7 +23,7 @@ defineProps<{}>();
   </div>
 </template>
 
-<script lang="ts">
+<script>
 export default {
   name: "GameCard",
   data: function () {

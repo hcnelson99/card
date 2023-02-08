@@ -1,7 +1,4 @@
-<script setup lang="ts">
-defineProps<{
-  editing: boolean;
-}>();
+<script setup>
 </script>
 
 <template>
@@ -13,9 +10,10 @@ defineProps<{
   ></canvas>
 </template>
 
-<script lang="ts">
+<script>
 export default {
   name: "DrawingCanvas",
+  props: ['editing'],
   mounted() {
     this.ctx = this.$refs.canvas.getContext("2d");
   },
