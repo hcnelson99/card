@@ -38,7 +38,7 @@ export default {
     }
   },
   methods: {
-    mouseDownDragCard: function (event) {
+    mouseDownDragCard (event) {
       if (this.editing) return;
       event.preventDefault()
       // get the mouse cursor position at startup:
@@ -47,7 +47,7 @@ export default {
       document.onmousemove = this.dragCard
       document.onmouseup = this.stopDragCard
     },
-    dragCard: function (event) {
+    dragCard (event) {
       event.preventDefault()
       this.positions.movementX = this.positions.clientX - event.clientX
       this.positions.movementY = this.positions.clientY - event.clientY
@@ -60,7 +60,7 @@ export default {
     stopDragCard () {
       document.onmouseup = null
       document.onmousemove = null
-    }
+    },
   }
 }
 </script>
