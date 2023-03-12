@@ -1,4 +1,4 @@
-<script setup >
+<script setup>
 import GameCard from "./components/GameCard.vue";
 </script>
 

@@ -1,5 +1,4 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
   <canvas
@@ -13,7 +12,7 @@
 <script>
 export default {
   name: "DrawingCanvas",
-  props: ['editing'],
+  props: ["editing"],
   mounted() {
     this.ctx = this.$refs.canvas.getContext("2d");
   },
